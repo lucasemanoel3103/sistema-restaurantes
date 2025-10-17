@@ -1,5 +1,5 @@
 import { type Request, type Response } from "express";
-import { AuthUserService } from "../../services/user/authUserService.js";
+import { AuthUserService } from "../../services/user/AuthUserService.js";
 
 class AuthUserController{
     async handle(req: Request, res: Response){
@@ -12,8 +12,7 @@ class AuthUserController{
             password
         })
 
-        return res.json({ ok: true })
-
+        return res.json(auth);
     }
 }
 
