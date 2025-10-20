@@ -8,6 +8,11 @@
     "resolveJsonModule": true,
     "moduleDetection": "force",
     "isolatedModules": true,
+    
+    "typeRoots": [
+      "./src/@types"
+    ],
+
 
     /* Strictness */
     "strict": false,
