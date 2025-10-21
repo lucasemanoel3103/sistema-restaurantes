@@ -7,6 +7,7 @@ import { DetailUserController } from './controllers/user/DetailUserController.js
 
 //-- Category --//
 import { CreateCategoryController } from './controllers/category/CreateCategoryController.js';
+import { ListCategoryController } from './controllers/category/ListCategoryController.js';
 
 import { isAuthenticated } from './middleware/isAuthenticated.js';
 
@@ -19,6 +20,6 @@ router.get('/detail', isAuthenticated, new DetailUserController().handle)
 
 //-- Categories routes --//
 router.post('/create', isAuthenticated, new CreateCategoryController().handle)
-
+router.get('/show', isAuthenticated, new ListCategoryController().handle)
 
 export {router};
