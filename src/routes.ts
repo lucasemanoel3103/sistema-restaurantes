@@ -12,6 +12,7 @@ import { ListCategoryController } from './controllers/category/ListCategoryContr
 
 //-- Product --//
 import { CreateProductController } from './controllers/product/CreateProductController.js';
+import { ListByCategoryController } from './controllers/product/ListByCategoryController.js';
 
 // Middleware
 import { isAuthenticated } from './middleware/isAuthenticated.js';
@@ -34,5 +35,6 @@ router.get('/show', isAuthenticated, new ListCategoryController().handle)
 
 //-- Products routes --//
 router.post('/product', isAuthenticated, upload.single('file'),new CreateProductController().handle)
+router.get('/category/product', isAuthenticated, new ListByCategoryController().handle)
 
 export {router};
