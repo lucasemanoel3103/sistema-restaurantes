@@ -7,7 +7,6 @@ import { fileURLToPath } from 'url'; // 2. Adicionado import de 'url'
 // --- Correção para __dirname em ES Modules ---
 const __filename = fileURLToPath(new URL(import.meta.url)); // 3. Pega o caminho do arquivo
 const __dirname = dirname(__filename); // 4. Pega o diretório do arquivo
-// --- Fim da correção ---
 
 export default {
   upload(folder: string) {

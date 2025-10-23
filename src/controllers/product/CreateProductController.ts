@@ -11,13 +11,13 @@ class CreateProductController{
             throw new Error("Erro ao carregar o arquivo!")
         }else{
 
-            const {originalname, filename} = req.file;
+            const {originalname, filename: banner} = req.file;
 
             const product = await createProductService.execute({
             name,
             price, 
             description,
-            banner: '',
+            banner,
             category_id
         });
 
