@@ -14,6 +14,13 @@ import { ListCategoryController } from './controllers/category/ListCategoryContr
 import { CreateProductController } from './controllers/product/CreateProductController.js';
 import { ListByCategoryController } from './controllers/product/ListByCategoryController.js';
 
+//-- Order --//
+import { CreateOrderController } from './controllers/order/CreateOrderController.js';
+import { RemoveOrderController } from './controllers/order/RemoveOrderController.js';
+
+//-- Item --//
+import { AddItemController } from './controllers/order/AddItemController.js';
+
 // Middleware
 import { isAuthenticated } from './middleware/isAuthenticated.js';
 
@@ -36,5 +43,12 @@ router.get('/show', isAuthenticated, new ListCategoryController().handle)
 //-- Products routes --//
 router.post('/product', isAuthenticated, upload.single('file'),new CreateProductController().handle)
 router.get('/category/product', isAuthenticated, new ListByCategoryController().handle)
+
+//-- Orders routes --//
+router.post('/order', isAuthenticated, new CreateOrderController().handle)
+router.delete('/order', isAuthenticated, new RemoveOrderController().handle)
+
+//--Itens routes --//
+router.post('/order/add', isAuthenticated, new AddItemController().handle)
 
 export {router};
