@@ -20,6 +20,7 @@ import { RemoveOrderController } from './controllers/order/RemoveOrderController
 
 //-- Item --//
 import { AddItemController } from './controllers/order/AddItemController.js';
+import { RemoveItemController } from './controllers/order/RemoveItemController.js';
 
 // Middleware
 import { isAuthenticated } from './middleware/isAuthenticated.js';
@@ -50,5 +51,6 @@ router.delete('/order', isAuthenticated, new RemoveOrderController().handle)
 
 //--Itens routes --//
 router.post('/order/add', isAuthenticated, new AddItemController().handle)
+router.delete('/order/remove', isAuthenticated, new RemoveItemController().handle)
 
 export {router};
