@@ -19,6 +19,7 @@ import { CreateOrderController } from './controllers/order/CreateOrderController
 import { RemoveOrderController } from './controllers/order/RemoveOrderController.js';
 import { SendOrderController } from './controllers/order/SendOrderController.js';
 import { ListOrdersController } from './controllers/order/ListOrdersController.js';
+import { DetailOrderController } from './controllers/order/DetailOrderController.js';
 
 //-- Item --//
 import { AddItemController } from './controllers/order/AddItemController.js';
@@ -52,6 +53,7 @@ router.post('/order', isAuthenticated, new CreateOrderController().handle)
 router.delete('/order', isAuthenticated, new RemoveOrderController().handle)
 router.put('/order/send', isAuthenticated, new SendOrderController().handle)
 router.get('/orders', isAuthenticated, new ListOrdersController().handle)
+router.get('/order/detail', isAuthenticated, new DetailOrderController().handle)
 
 //--Itens routes --//
 router.post('/order/add', isAuthenticated, new AddItemController().handle)
