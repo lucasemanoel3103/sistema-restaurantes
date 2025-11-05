@@ -35,7 +35,7 @@ export default function Page() {
             </button>
           </form>
 
-          <Link href="signup" className={styles.text}>
+          <Link href="/signup" className={styles.text}>
             Não possui uma conta? Cadastre-se aqui
           </Link>
         </section>
