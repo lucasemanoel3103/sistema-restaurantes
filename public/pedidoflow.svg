@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="200" viewBox="0 0 800 200" role="img" aria-label="PedidoFlow logo">
+  <!-- Transparent background: no rect filled -->
+  <!-- Play-symbol: outer rounded triangle (stroke) -->
+  <g transform="translate(0,0)">
+    <polygon points="40,30 160,100 40,170" fill="none" stroke="#FFFFFF" stroke-width="16" stroke-linejoin="round" stroke-linecap="round" />
+    <!-- inner filled triangle -->
+    <polygon points="70,60 130,100 70,140" fill="#FFFFFF" />
+  </g>
+
+  <!-- Text: PedidoFlow -->
+  <text x="200" y="120" font-family="Montserrat, Arial, Helvetica, sans-serif" font-weight="700" font-size="64" fill="#FFFFFF" letter-spacing="0.5">PedidoFlow</text>
+</svg>
