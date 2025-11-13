@@ -1,0 +1,31 @@
+.container {
+  max-width: 720px;
+  margin: 20px auto;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.container h1 {
+  color: var(--white);
+}
+
+.containerHeader {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+.containerHeader button {
+  background: transparent;
+  border: 0;
+}
+
+.listOrders {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.orderItem {
+  display: flex;
+}/*# sourceMappingURL=styles.module.css.map */

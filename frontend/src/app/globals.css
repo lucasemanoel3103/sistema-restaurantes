@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+:root {
+  --white: #ffffff;
+  --black: #333333;
+  --dark-900: #2e3d32;
+  --dark-700: #50a25f;
+  --gray-100: #e0e0e0;
+  --green-900: #66bb6a;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-rendering: none;
+}
+
+body {
+  background-color: var(--dark-900);
+}
+
+body, input, textarea, select, button {
+  font: 400, 1rem sans-serif;
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 87.5%;
+  }
+}
+@media (max-width: 1080px) {
+  html {
+    font-size: 97.75%;
+  }
+}/*# sourceMappingURL=globals.css.map */
