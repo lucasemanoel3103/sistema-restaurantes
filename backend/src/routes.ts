@@ -13,6 +13,7 @@ import { ListCategoryController } from './controllers/category/ListCategoryContr
 //-- Product --//
 import { CreateProductController } from './controllers/product/CreateProductController.js';
 import { ListByCategoryController } from './controllers/product/ListByCategoryController.js';
+import { ListProductController } from './controllers/product/ListProductController.js';
 
 //-- Order --//
 import { CreateOrderController } from './controllers/order/CreateOrderController.js';
@@ -48,6 +49,7 @@ router.get('/show', isAuthenticated, new ListCategoryController().handle)
 //-- Products routes --//
 router.post('/product', isAuthenticated, upload.single('file'),new CreateProductController().handle)
 router.get('/category/product', isAuthenticated, new ListByCategoryController().handle)
+router.get('/show/product', isAuthenticated, new ListProductController().handle)
 
 //-- Orders routes --//
 router.post('/order', isAuthenticated, new CreateOrderController().handle)
