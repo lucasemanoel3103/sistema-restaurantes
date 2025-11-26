@@ -14,6 +14,11 @@ class ListProductService {
         description: true,
         banner: true,
         category_id: true,
+        category: {
+        select: {
+          name: true 
+        }
+      }
       },
       orderBy: {
         created_at: "desc", // Opcional: ordena pelos mais novos
